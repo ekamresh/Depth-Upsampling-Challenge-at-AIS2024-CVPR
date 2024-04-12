@@ -12,6 +12,6 @@ mu = 0.001;
 f_hat = (Is*Is' + mu*L)\(Is*fs);%This internally calls Conjugate Gradient (CG).
 
 %reconstruct high resolution image
-high_res_depth = reshape(f_hat, h, w);
+high_res_depth = reshape(f_hat, w, h)';
 
 end

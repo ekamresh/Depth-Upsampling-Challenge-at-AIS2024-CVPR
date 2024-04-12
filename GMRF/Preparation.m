@@ -16,5 +16,5 @@ function [high_res_depth, original_pixel_locations] = Preparation(low_res_depth,
 
     %Original pixel location
     original_pixel_locations = false(size(high_res_depth));
-    original_pixel_locations(1:2:end, 1:2:end) = true;
+    original_pixel_locations(1:upsampling_ratio_h:end, 1:upsampling_ratio_h:end) = true;
 end
