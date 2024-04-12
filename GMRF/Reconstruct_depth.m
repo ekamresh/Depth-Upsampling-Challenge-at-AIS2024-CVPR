@@ -8,7 +8,7 @@ S = reshape(original_pixel_locations.',1,[])';
 I = speye(N,N);
 Is = I(:,S);
 fs = f(S);
-mu = 0.01;
+mu = 0.001;
 f_hat = (Is*Is' + mu*L)\(Is*fs);%This internally calls Conjugate Gradient (CG).
 
 %reconstruct high resolution image
